@@ -3,7 +3,7 @@ import {userService} from "../../services";
 import {User} from "../User/User";
 
 const Users = (props) => {
-    const {getUserId} = props;
+    const {getId} = props;
     const [users, setUsers] = useState([]);
 
 
@@ -18,7 +18,7 @@ const Users = (props) => {
     return (
         <div>
             {
-                users.map(value => <User key={value.id} user={value} getUserId={getUserId}/>)
+                users.map(value => <User key={value.id} user={value} getId={getId}/>)
             }
         </div>
     );

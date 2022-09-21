@@ -1,7 +1,6 @@
 
 
-import {Users} from "./components/Users/Users";
-import {Posts} from "./components/Posts/Posts";
+import {Users, Posts} from "./components";
 
 import {useState} from "react";
 import {userService} from "./services";
@@ -9,20 +8,14 @@ import {userService} from "./services";
 function App() {
     const [posts, setPosts] = useState([]);
 
-    const getUserId = (id) =>{
-
-            userService.getPosts(id).then(({data}) => {
-                setPosts([...data])
-                console.log(posts, data)
-            })
-
-
+    const getId = (userid) => {
+      userService.getPosts(userid).then(({data})=> setPosts([...data]))
     }
 
 
   return (
     <div className="App">
-      <Users getUserId={getUserId}/>
+      <Users getId={getId}/>
         <Posts posts={posts}/>
     </div>
   );
