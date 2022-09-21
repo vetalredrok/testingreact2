@@ -1,10 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import {userService} from "../../services";
+
 
 const User = (props) => {
     const {user, getId} = props;
 
-    const [posts, setPosts] = useState([])
 
 
 
