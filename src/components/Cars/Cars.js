@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
-import {Car} from "../Car/Car";
 import {CarForm} from "../CarForm/CarForm";
+import {Car} from "../Car/Car";
 import {CarService} from "../../services";
 
 const Cars = () => {
