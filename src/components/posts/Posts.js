@@ -17,6 +17,7 @@ const Posts = () => {
             {
                 posts.map(value => <Post key={value.id} post={value}/>)
             }
+
         </div>
     );
 };
