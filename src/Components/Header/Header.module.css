@@ -1,0 +1,16 @@
+.Header{
+    height: 50px;
+    background: blue;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns button {
+    margin: 5px;
+}
