@@ -73,11 +73,19 @@ const userSlice = createSlice({
                 state.error = action.payload;
                 state.loading = false;
             })
-            .addCase(getAll.pending, (state, action) => {
+            .addCase(getAll.pending, state => {
                 state.loading = true;
             })
             .addCase(getById.fulfilled, (state, action) => {
-                state.userFromApi = action.payload
+                state.userFromApi = action.payload;
+                action.loading = false;
+            })
+            .addCase(getById.rejected, (state, action) => {
+                state.error = action.payload;
+                state.loading = false;
+            })
+            .addCase(getById.pending, state => {
+                state.loading = true;
             })
 });
 
